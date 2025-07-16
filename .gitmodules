@@ -1,3 +1,6 @@
 [submodule ".doom.d/modules/editor/meow"]
 	path = .doom.d/modules/editor/meow
 	url = git@github.com:therealhampus/doom-meow.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:therealhampus/kickstart.nvim.git
