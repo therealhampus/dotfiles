@@ -1,9 +1,6 @@
 [submodule ".doom.d/modules/editor/meow"]
 	path = .doom.d/modules/editor/meow
 	url = git@github.com:therealhampus/doom-meow.git
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = git@github.com:therealhampus/kickstart.nvim.git
 [submodule ".zsh/plugins/zsh-syntax-highlighting"]
 	path = .zsh/plugins/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
