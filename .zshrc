@@ -38,6 +38,9 @@ setopt inc_append_history_time
 #
 bindkey '^R' skim-history-widget
 
+# Go version manager
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
 # Load aliases
 for alias_file ("$HOME"/.zsh/aliases/*.zsh); do
   source "$alias_file"
@@ -47,18 +50,8 @@ unset alias_file
 # Load exports
 source $HOME/.zsh/exports
 
-[[ -s "/Users/hampuse/.gvm/scripts/gvm" ]] && source "/Users/hampuse/.gvm/scripts/gvm"
-
-# Go version manager
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hampuse/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Alias zoxide
-alias cd="z"
-
-eval "$(zoxide init zsh)"
