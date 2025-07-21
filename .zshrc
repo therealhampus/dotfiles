@@ -10,11 +10,6 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Plugins
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/hampuse/repos/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
 # Better history
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -23,6 +18,11 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
+
+# Plugins
+source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Bind TAB and Shift+TAB to select autocomplete menu AND cycle items.
 bindkey              '^I' menu-select
