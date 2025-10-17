@@ -110,3 +110,4 @@
 ;;
 ;; Meow bindings
 (load! "+bindings")
+(load! "+treemacs-bindings")
