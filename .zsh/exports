@@ -6,15 +6,5 @@ export ANDROID_HOME=~/Library/Android/sdk
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Export Ruby + optional compilers exports
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export GEM_HOME=$HOME/.gem
-export PATH=$GEM_HOME/bin:$PATH
-export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-
-# Export grep
-export PATH="$HOME/homebrew/opt/grep/libexec/gnubin:$PATH"
-
-# Change lazygit config location
-export XDG_CONFIG_HOME="$HOME/.config"
+# export cargo bin on path
+export PATH="$HOME/.cargo/bin:$PATH"

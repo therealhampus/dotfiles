@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -21,9 +21,9 @@ setopt hist_verify
 
 # Plugins
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/.zsh/plugins/fzf-zsh-plugin/fzf-zsh-plugin.plugin.zsh
+source $HOME/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Bind TAB and Shift+TAB to select autocomplete menu AND cycle items.
 bindkey              '^I' menu-select
@@ -39,9 +39,3 @@ unset alias_file
 
 # Load exports
 source $HOME/.zsh/exports
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hampuse/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
