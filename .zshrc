@@ -38,9 +38,6 @@ setopt inc_append_history_time
 #
 bindkey '^R' skim-history-widget
 
-# Go version manager
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-
 # Load aliases
 for alias_file ("$HOME"/.zsh/aliases/*.zsh); do
   source "$alias_file"

@@ -1,0 +1,24 @@
+git:
+  commitPrefix:
+    - pattern: "^\\w+\\/(\\w+-\\w+).*"
+      replace: "$1: "
+# Keybindings
+customCommands:
+  - key: "f"
+    context: "localBranches"
+    command: "git fetch --all"
+  - key: "p"
+    description: "Pull..."
+    commandMenu:
+      - key: "r"
+        description: "Rebase your local changes on top of the remote branch"
+        context: "global"
+        command: "git pull --rebase"
+      - key: "m"
+        description: "Merges the remote branch in to your local branch"
+        context: "global"
+        command: "git pull --no-rebase"
+      - key: "f"
+        description: "Only pull if the branches do not diverge"
+        context: "global"
+        command: "git pull --ff-only"

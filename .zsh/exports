@@ -15,3 +15,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 
 # Export grep
 export PATH="$HOME/homebrew/opt/grep/libexec/gnubin:$PATH"
+
+# Change lazygit config location
+export XDG_CONFIG_HOME="$HOME/.config"
