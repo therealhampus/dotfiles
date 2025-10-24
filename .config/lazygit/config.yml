@@ -8,7 +8,7 @@ customCommands:
     context: "localBranches"
     command: "git fetch --all"
   - key: "p"
-    description: "Pull..."
+    description: "Pull"
     commandMenu:
       - key: "r"
         description: "Rebase your local changes on top of the remote branch"
