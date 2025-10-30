@@ -7,3 +7,11 @@ language-servers = ["gopls", "harper-ls"]
 name = "yaml"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+[language-server.rumdl]
+command = "rumdl"
+args = ["server"]
+
+[[language]]
+name = "markdown"
+language-servers = ["marksman", "harper-ls", "rumdl"]
