@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# required by magit
+unset GIT_LITERAL_PATHSPECS
+
+COMMIT_EDITMSG=$1
+MESSAGE=$(cat $COMMIT_EDITMSG)
+if [[ "$MESSAGE" =~ .*fixup!.* ]]; then
+    exit 0;
+fi
+
+TICKET=$(git rev-parse --abbrev-ref HEAD | grep -Eo '(\w+-[0-9]+)' | tr "[:lower:]" "[:upper:]")
+if [[ $TICKET == "" || "$MESSAGE" == "$TICKET"* ]]; then
+    exit 0;
+fi
+
+echo "$TICKET: $MESSAGE" > $COMMIT_EDITMSG

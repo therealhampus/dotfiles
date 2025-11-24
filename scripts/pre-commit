@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+./gradlew detektDebug assembleDebug testDebug -PdetektAutoCorrect=true

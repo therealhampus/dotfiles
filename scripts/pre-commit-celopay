@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd $HOME/repos/celopay
+
+./gradlew detekt detektRelease detektReleaseUnitTest assembleDebug testRelease app:android:lintRelease assembleAndroidTest -PdetektAutoCorrect=true

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd $HOME/repos/ship-it/
+
+go test ./...
+
+# golangci-lint run ./... This can uncommented when CI and golangci config has been migrated to newer version
