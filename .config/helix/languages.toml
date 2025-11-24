@@ -14,4 +14,4 @@ args = ["server"]
 
 [[language]]
 name = "markdown"
-language-servers = ["marksman", "harper-ls", "rumdl"]
+language-servers = ["marksman", "harper-ls"]
