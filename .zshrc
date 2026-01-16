@@ -19,6 +19,9 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
+# Configure fzf zsh plugin
+export FZF_PREVIEW_WINDOW="right:65%:nohidden"
+
 # Plugins
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
