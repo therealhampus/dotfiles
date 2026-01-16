@@ -64,16 +64,6 @@ separator = "|"
 0 = "goto_line_start"
 "$" = "goto_line_end"
 G = "goto_file_end"
-# create key cluster of j,i,k,l
-j = "move_char_left"
-i = "move_visual_line_up"
-k = "move_visual_line_down"
-# remap insert mode 'i'
-f = "insert_mode"
-F = "insert_at_line_start"
-# remap 'f' to 'h'
-h = "find_next_char"
-H = "find_prev_char"
 # removes everything to the right of the cursor
 D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
 # enter select mode and mark line
@@ -125,10 +115,3 @@ K = "swap_view_down"
 0 = "goto_line_start"
 "$" = "goto_line_end"
 G = "extend_to_file_end"
-# create key cluster of j,i,k,l
-j = "extend_char_left"
-i = "extend_visual_line_up"
-k = "extend_visual_line_down"
-# # remap insert mode 'i'
-f = "insert_mode"
-F = "insert_at_line_start"
