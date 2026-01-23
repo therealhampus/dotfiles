@@ -23,20 +23,13 @@ setopt hist_verify
 source $HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/plugins/fzf-zsh-plugin/fzf-zsh-plugin.plugin.zsh
 
 # Bind TAB and Shift+TAB to select autocomplete menu AND cycle items.
 bindkey              '^I' menu-select
 bindkey "$terminfo[kcbt]" menu-select
 bindkey -M menuselect              '^I'         menu-complete
 bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
-
-# Skim setup
-setopt EXTENDED_HISTORY
-setopt inc_append_history_time
-
-# Bind
-#
-bindkey '^R' skim-history-widget
 
 # Load aliases
 for alias_file ("$HOME"/.zsh/aliases/*.zsh); do

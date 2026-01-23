@@ -10,3 +10,6 @@
 [submodule ".zsh/plugins/zsh-autosuggestions"]
 	path = .zsh/plugins/zsh-autosuggestions
 	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule ".zsh/plugins/fzf-zsh-plugin"]
+	path = .zsh/plugins/fzf-zsh-plugin
+	url = git@github.com:unixorn/fzf-zsh-plugin.git
