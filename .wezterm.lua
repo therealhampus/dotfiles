@@ -16,25 +16,45 @@ config.window_frame = {
   -- Whatever font is selected here, it will have the
   -- main font setting appended to it to pick up any
   -- fallback fonts you may have used there.
-  font = wezterm.font { family = 'Roboto', weight = 'Bold' },
+  font = wezterm.font { family = 'FiraCode Nerd Font', weight = 'Bold' },
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
-  font_size = 12.0,
+  font_size = 13.0,
 
   -- The overall background color of the tab bar when
   -- the window is focused
-  active_titlebar_bg = '#333333',
+  active_titlebar_bg = '#2e3440',
 
   -- The overall background color of the tab bar when
   -- the window is not focused
-  inactive_titlebar_bg = '#333333',
+  inactive_titlebar_bg = '#2e3440',
 }
 
 config.colors = {
   tab_bar = {
     -- The color of the inactive tab bar edge/divider
-    inactive_tab_edge = '#575757',
+    inactive_tab_edge = '#2e3440',
+ -- Inactive tabs are the tabs that do not have focus
+    inactive_tab = {
+      bg_color = '#232831',
+      fg_color = '#808080',
+    },
+    -- The active tab is the one that has focus in the window
+    active_tab = {
+      -- The color of the background area for the tab
+      bg_color = '#3e4a5b',
+      -- The color of the text for the tab
+      fg_color = '#c0c0c0',
+    },
+   -- The new tab button that let you create new tabs
+    new_tab = {
+      bg_color = '#2e3440',
+      fg_color = '#808080',
+
+      -- The same options that were listed under the `active_tab` section above
+      -- can also be used for `new_tab`.
+    },
   },
 }
 
