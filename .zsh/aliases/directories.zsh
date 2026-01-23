@@ -33,6 +33,8 @@ function d () {
 }
 compdef _dirs d
 
+# Rebind ls to eza
+alias ls='eza'
 # List directory contents
 alias lsa='ls -lah'
 alias l='ls -lah'
