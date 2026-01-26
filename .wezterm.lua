@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
-config.font_size = 13
+config.font_size = 10
 config.font = wezterm.font('FiraCode Nerd Font', { weight = 'Regular', stretch = 'Expanded' })
 
 config.color_scheme = 'nordfox'
