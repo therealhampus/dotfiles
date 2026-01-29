@@ -2,6 +2,8 @@
 [[language]]
 name = "go"
 language-servers = ["gopls", "harper-ls"]
+auto-format = true
+formatter = { command = "gofmt" }
 
 [[language]]
 name = "yaml"
