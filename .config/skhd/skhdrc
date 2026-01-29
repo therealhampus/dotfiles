@@ -143,3 +143,20 @@
 
 # toggle sticky(+float), picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle pip
+
+==== Actual config ====
+
+# Focus
+ctrl - j : yabai -m window --focus west
+ctrl - i : yabai -m window --focus north
+ctrl - l : yabai -m window --focus east
+ctrl - k : yabai -m window --focus south
+
+# Swap
+ctrl + shift - j : yabai -m window --focus west
+ctrl + shift - i : yabai -m window --focus north
+ctrl + shift - l : yabai -m window --focus east
+ctrl + shift - k : yabai -m window --focus south
+
+# toggle window split type
+ctrl - comma : yabai -m window --toggle split
