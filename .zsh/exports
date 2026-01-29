@@ -1,10 +1,5 @@
-# Export JAVA_HOME
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-19.jdk/Contents/Home
-
-# Export Android SDK
-export ANDROID_HOME=~/Library/Android/sdk
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
 # export cargo bin on path
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# export needed for proton pass cli
+export PATH="/Users/hampuseriksson/.local/bin:$PATH"
