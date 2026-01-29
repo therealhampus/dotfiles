@@ -3,3 +3,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # export needed for proton pass cli
 export PATH="/Users/hampuseriksson/.local/bin:$PATH"
+
+# Needed to get lazygit to read its config
+export XDG_CONFIG_HOME="$HOME/.config"
