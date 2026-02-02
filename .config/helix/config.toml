@@ -36,24 +36,15 @@ skip-levels = 1
 left = [
   "mode",
   "spinner",
-  "version-control",
-  "spacer",
-  "separator",
   "file-name",
-  "read-only-indicator",
   "file-modification-indicator",
 ]
 right = [
   "diagnostics",
-  "workspace-diagnostics",
+  "version-control",
   "position",
-  "total-line-numbers",
-  "position-percentage",
-  "file-encoding",
-  "file-line-ending",
   "file-type",
   "register",
-  "selections",
 ]
 separator = "|"
 
