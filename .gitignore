@@ -1,3 +1,4 @@
 .DS_Store
 .claude/settings.json
 .config/helix/ignore
+.zsh/.exports
