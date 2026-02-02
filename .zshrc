@@ -39,6 +39,7 @@ unset alias_file
 
 # Load exports
 source $HOME/.zsh/exports
+source $HOME/.zsh/.exports
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc'; fi
