@@ -58,5 +58,62 @@ config.colors = {
   },
 }
 
+-- Configure keybindings (mainly to have multiplexing behaviour)
+local act = wezterm.action
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.keys = {
+  -- Turn off default hide action (CMD-m). Keep uassigned for now.
+  {
+    key = 'm',
+    mods = 'CMD',
+    action = act.DisableDefaultAssignment,
+  },
+  -- Multiplexer bindings
+  -- Pane Modification
+  {
+    key = 's',
+    mods = 'LEADER',
+    action = act.PaneSelect {
+      mode = 'SwapWithActive'
+    },
+  },
+  {
+    key = '-',
+    mods = 'LEADER',
+    action = act.SplitVertical { domain = 'CurrentPaneDomain' }
+  },
+  {
+    key = '|',
+    mods = 'LEADER',
+    action = act.SplitHorizontal { domain = 'CurrentPaneDomain' }
+  },
+  {
+    key = 'w',
+    mods = 'LEADER',
+    action = act.CloseCurrentPane { confirm = true },
+  },
+  -- Pane Movement
+  {
+    key = 'h',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'j',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Down',
+  },
+  {
+    key = 'k',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Up',
+  },
+  {
+    key = 'l',
+    mods = 'LEADER',
+    action = act.ActivatePaneDirection 'Right',
+  },
+}
+
 return config
 
