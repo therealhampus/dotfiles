@@ -41,6 +41,11 @@ tabline.setup({
 
 -- Config options needed for tabline to look nice
 tabline.apply_to_config(config)
-
+config.window_padding = {
+  left = 10,
+  right = 10,
+  top = 5,
+  bottom = 5,
+}
 return config
 
