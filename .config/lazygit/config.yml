@@ -10,6 +10,8 @@ keybinding:
     forceCheckoutBranch: <disabled> # Free 'F' keybinding
   commits:
     openLogMenu: "L"
+    moveDownCommit: <pgdown>
+    moveUpCommit: <pgup>
 customCommands:
   - key: "f"
     context: "localBranches"
