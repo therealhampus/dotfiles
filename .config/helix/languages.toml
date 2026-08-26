@@ -1,13 +1,31 @@
-
+# ==============================
+# ========== Golang ============
+# ==============================
+# Configured to use gopls and  harper-ls for code and natural language.
 [[language]]
 name = "go"
 language-servers = ["gopls", "harper-ls"]
 
+
+# ==============================
+# =========== YAML =============
+# ==============================
 [[language]]
 name = "yaml"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
+# ==============================
+# =========== JSON =============
+# ==============================
+[[language]]
+name = "json"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "json"] }
+
+# ==============================
+# ========= Markdown ===========
+# ==============================
 [language-server.rumdl]
 command = "rumdl"
 args = ["server"]
