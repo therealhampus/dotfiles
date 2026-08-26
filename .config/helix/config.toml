@@ -76,6 +76,8 @@ W = ":set whitespace.render none"
 s = ":toggle soft-wrap.enable"
 r = ":set rulers [120]"
 R = ":set rulers [0]"
+l = ":lsp-stop"
+L = ":lsp-restart"
 
 [keys.normal.space.f] # minor mode file
 f = "file_picker_in_current_directory"
