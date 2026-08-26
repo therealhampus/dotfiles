@@ -31,12 +31,6 @@ bindkey "$terminfo[kcbt]" menu-select
 bindkey -M menuselect              '^I'         menu-complete
 bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
 
-# Load aliases
-for alias_file ("$HOME"/.zsh/aliases/*.zsh); do
-  source "$alias_file"
-done
-unset alias_file
-
 # Load exports
 source $HOME/.zsh/exports
 source $HOME/.zsh/.exports
@@ -46,3 +40,9 @@ if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/hampuse/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/hampuse/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Load aliases
+for alias_file ("$HOME"/.zsh/aliases/*.zsh); do
+  source "$alias_file"
+done
+unset alias_file
