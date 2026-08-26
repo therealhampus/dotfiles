@@ -92,15 +92,11 @@ z = ":reset-diff-change"
 b = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}"
 d  = [":vsplit-new", ":lang diff", ":insert-output git diff"]
 
-[keys.normal.space.w]
-# create key cluster of j,i,k,l
-h = "hsplit"
-j = "jump_view_left"
-i = "jump_view_up"
-k = "jump_view_down"
-J = "swap_view_left"
-I = "swap_view_up"
-K = "swap_view_down"
+[keys.normal.space.w] # minor mode window management
+h = "jump_view_left"
+j = "jump_view_down"
+k = "jump_view_up"
+l = "jump_view_right"
 
 # ===================
 # === Select Mode ===
