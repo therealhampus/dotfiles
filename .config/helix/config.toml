@@ -48,6 +48,9 @@ right = [
 ]
 separator = "|"
 
+[editor.file-picker]
+hidden = false # Show hidden files by default.
+
 # ===================
 # === Normal Mode ===
 # ===================
