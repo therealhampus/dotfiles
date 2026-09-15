@@ -29,6 +29,8 @@ tabline.setup({
   sections = {
     tabline_a = { 'mode' },
     tab_active = {
+      { Foreground = { Color = "#ebcb8b" } },
+      { Attribute = { Intensity= "Bold" } },
       'index',
       { 'process', padding = { left = 0, right = 0 } }
     },
