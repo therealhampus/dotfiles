@@ -6,6 +6,17 @@ config.font = wezterm.font('FiraCode Nerd Font', { weight = 'Regular', stretch =
 
 config.color_scheme = 'nordfox'
 
+-- Show which key table is active in the status area
+local function key_table_mode(window, pane)
+  local name = window:active_key_table()
+  if name then
+    name = name .. " "
+  else
+    name = ""
+  end
+  return name
+end
+
 -- Tab bar style via tabline!
 local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 tabline.setup({
@@ -35,7 +46,10 @@ tabline.setup({
       { 'process', padding = { left = 0, right = 0 } }
     },
     tab_inactive = { 'index', { 'process', padding = { left = 0, right = 0 } } },
-    tabline_x = { '' },
+    tabline_x = {
+      { Attribute = { Intensity= "Bold" } },
+      key_table_mode
+    },
     tabline_y = { 'datetime' },
     tabline_z = { 'domain' },
   }
@@ -46,7 +60,7 @@ tabline.apply_to_config(config)
 
 -- Configure keybindings (mainly to have multiplexing behaviour)
 local act = wezterm.action
-config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
+config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 10000 }
 config.keys = {
   -- Turn off default hide action (CMD-m). Keep uassigned for now.
   {
@@ -99,6 +113,82 @@ config.keys = {
     mods = 'LEADER',
     action = act.ActivatePaneDirection 'Right',
   },
+  -- resize mode
+  -- Puts wez into 'resize mode' where one can resize the active pane.
+  -- Stays until mode is cancelled.
+  {
+    key = 'r',
+    mods = 'LEADER',
+    action = act.ActivateKeyTable {
+      name = 'RESIZE',
+      one_shot = false
+    }
+  },
+  -- focus/move mode
+  -- Puts wez into a mode where one can focus and move panes around.
+  -- Stays until mode is cancelled.
+  {
+    key = 'm',
+    mods = 'LEADER',
+    action = act.ActivateKeyTable {
+      name = 'MOVE',
+      one_shot = false
+    }
+  }
+}
+
+config.key_tables = {
+  -- Pane resizing
+  RESIZE = {
+    {
+      key = 'h',
+      action = act.AdjustPaneSize { 'Left', 1 }
+    },
+
+    {
+      key = 'j',
+      action = act.AdjustPaneSize { 'Down', 1 }
+    },
+
+    {
+      key = 'k',
+      action = act.AdjustPaneSize { 'Up', 1 }
+    },
+
+    {
+      key = 'l',
+      action = act.AdjustPaneSize { 'Right', 1 }
+    },
+
+    { key = 'Escape', action = 'PopKeyTable' },
+    { key = 'Enter', action = 'PopKeyTable' },
+  },
+
+  -- Pane Movement
+  MOVE = {
+    {
+      key = 'h',
+      action = act.ActivatePaneDirection 'Left',
+    },
+
+    {
+      key = 'j',
+      action = act.ActivatePaneDirection 'Down',
+    },
+
+    {
+      key = 'k',
+      action = act.ActivatePaneDirection 'Up',
+    },
+
+    {
+      key = 'l',
+      action = act.ActivatePaneDirection 'Right',
+    },
+
+    { key = 'Escape', action = 'PopKeyTable' },
+    { key = 'Enter', action = 'PopKeyTable' },
+  }
 }
 
 return config
