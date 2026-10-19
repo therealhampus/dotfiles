@@ -100,6 +100,14 @@ j = "jump_view_down"
 k = "jump_view_up"
 l = "jump_view_right"
 
+[keys.normal.C-y] # Yazi open files
+y = ":sh wezterm cli split-pane --left --percent 30 -- ${HOME}/.config/helix/scripts/yazi-to-wez.sh $WEZTERM_PANE open > /dev/null"
+v = ":sh wezterm cli split-pane --left --percent 30 -- ${HOME}/.config/helix/scripts/yazi-to-wez.sh $WEZTERM_PANE vsplit > /dev/null"
+h = ":sh wezterm cli split-pane --left --percent 30 -- ${HOME}/.config/helix/scripts/yazi-to-wez.sh $WEZTERM_PANE hsplit > /dev/null"
+Y = ":sh wezterm cli split-pane --left --percent 30 -- ${HOME}/.config/helix/scripts/yazi-to-wez.sh $WEZTERM_PANE open zoom > /dev/null"
+V = ":sh wezterm cli split-pane --left --percent 30 -- ${HOME}/.config/helix/scripts/yazi-to-wez.sh $WEZTERM_PANE vsplit zoom > /dev/null"
+H = ":sh wezterm cli split-pane --left --percent 30 -- ${HOME}/.config/helix/scripts/yazi-to-wez.sh $WEZTERM_PANE hsplit zoom > /dev/null"
+
 # ===================
 # === Select Mode ===
 # ===================
